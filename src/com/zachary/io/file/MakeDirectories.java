@@ -52,6 +52,7 @@ public class MakeDirectories {
 		File file;
 		for(String arg: args) {
 			file = new File(arg);
+			fileData(file);
 			if(file.exists()) {
 				System.out.println(file + " exists");
 				System.out.println("deleting ...");
