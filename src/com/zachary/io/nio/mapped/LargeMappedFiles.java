@@ -28,7 +28,7 @@ public class LargeMappedFiles {
 	}
 	
 	private static void mappedFileTest() throws FileNotFoundException, IOException {
-		MappedByteBuffer out = new RandomAccessFile("file/output/MappedByteBuffer/data.txt", "rw").getChannel().map(FileChannel.MapMode.READ_WRITE, 0, 100);
+		MappedByteBuffer out = new RandomAccessFile("file/output/MappedByteBuffer/data.txt", "rw").getChannel().map(FileChannel.MapMode.READ_WRITE, 0, 10);
 		int count = 0;
 		while(out.hasRemaining()) {
 			System.out.println((char) out.get());
